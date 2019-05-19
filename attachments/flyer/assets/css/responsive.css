@@ -1,0 +1,84 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+    .flyer {
+        margin: 10px;
+        padding: 10px;
+
+    }
+
+    .title {
+        margin-left: -36px;
+    }
+
+    .flyer-top {
+        padding: 25px;
+    }
+
+    .title h3 {
+        font-size: 20px;
+    }
+
+    .flyer-top h2,
+    .flyer-top h4 {
+        font-size: 25px;
+    }
+
+    .flyer-top {
+        background: url(../images/card.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .flyer-middle {
+        padding-left: 0;
+    }
+
+    .flyer-middle a {
+        font-size: 14px;
+    }
+
+    .star {
+        right: -90px;
+        top: -7px;
+    }
+
+    .flyer-middle img {
+        height: 35px;
+        width: 35px;
+        margin-top: -7px;
+    }
+
+    .flyer-middle li {
+        line-height: 2.2;
+    }
+
+    .flyer-footer {
+        padding: 15px;
+    }
+
+    .flyer-footer {
+        text-align: center;
+    }
+
+    .flyer-footer h2 {
+        font-size: 22px;
+        padding-right: 0;
+        font-weight: 700;
+    }
+
+    .footer-last li {
+        padding-right: 0;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 2;
+    }
+}
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
