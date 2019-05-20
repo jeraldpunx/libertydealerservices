@@ -43,6 +43,10 @@
     padding: 7px 8px;
 }
 
+.navbar .navbar-nav > li.dropdown > a.dropdown-item {
+    display: block;
+}
+
 .b-advantages-1 i{
 	font-size: 35px;
     margin-bottom: 20px;
@@ -591,9 +595,13 @@ iframe{
     
 }
 
+.header-navibox-2 .active-nav {
+    color: #1e74ff !important;
+}
 
-
-
+header.header {
+    box-shadow: 0 4px 2px -2px gray;
+}
 
 
 

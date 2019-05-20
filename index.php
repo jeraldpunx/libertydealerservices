@@ -90,43 +90,8 @@
     <!-- MOBILE MENU-->
     <!-- ==========================-->
    
-    <div class="l-theme animated-css" data-header="sticky" data-header-top="200" data-canvas="container">
-      <header class="header header-boxed-width navbar-fixed-top header-background-white header-color-black header-topbar-dark header-logo-black header-topbarbox-1-left header-topbarbox-2-right header-navibox-1-left header-navibox-2-right header-navibox-3-right header-navibox-4-right">
-            <div class="container container-boxed-width">
-               
-                <nav class="navbar" id="nav">
-                    <div class="container">
-                        <div class="header-navibox-1">
-                            <!-- Mobile Trigger Start-->
-                            <button class="menu-mobile-button visible-xs-block js-toggle-mobile-slidebar toggle-menu-button"><i class="toggle-menu-button-icon"><span></span><span></span><span></span><span></span><span></span><span></span></i>
-                            </button>
-                            <!-- Mobile Trigger End-->
-                            <a class="navbar-brand scroll" href="index.php">
-                                <img class="normal-logo img-responsive" src="images/logo1.png" alt="logo">
-                                <img style="width: 204px;" class="scroll-logo hidden-xs img-responsive" src="images/logo1.png" alt="logo">
-                            </a>
-                        </div>
-                        <!--<div class="header-navibox-3"><a class="btn btn-primary" href="become-a-dealer.html">BECOME A DEALER</a>-->
-                        <!--</div>-->
-                        <div class="header-navibox-2">
-                            <ul class="yamm main-menu nav navbar-nav">
-                                <li><a href="javascript:;"> Customers </a></li>
-                                <li><a href="become-a-dealer.html"> Dealers </a></li>
-                                <li><a href="#section2"> Contact Us </a></li>
-                                <li><a href="#section1"> About Us </a></li>
-                                <?php  if (isset($_SESSION['username'])) : ?>
-                                    <li><a href="offers.php" style="color: #1e74ff;">Offers</a></li>
-                                    <li><a href="index.php?logout='1'" style="color: red;">Logout</a></li>
-                                <?php else : ?>
-                                    <li><a href="index.php" style="color: #59AAAC;">Login</a></li>
-                                <?php endif ?>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <!-- end .header-->
+        <?php include 'include/header.php'; ?>
+
 
         <div class="homepage-sec mrgtop" style="position: relative;overflow: hidden;">
             <div class="overlay"></div>
@@ -143,23 +108,10 @@
                                         <p> Liberty Dealer Services has been providing financial and insurance services since 1998. With a market consisting of insurance companies, car dealerships, banks and credit unions, we are pleased to offer the same underwriting experience direct to your firm. Call 1-888-623-5547 Today to Learn More About Our Award-Winning Company. </p>
                                     </div>
                                 </div>
+                                <?php if (!isset($_SESSION['username'])) : ?>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="slideBox">
-                                        <?php  if (isset($_SESSION['username'])) : ?>
-                                            <!-- notification message -->
-                                            <?php if (isset($_SESSION['success'])) : ?>
-                                                <div class="alert alert-success">
-                                                  <strong>
-                                                    <?php 
-                                                        echo $_SESSION['success']; 
-                                                        unset($_SESSION['success']);
-                                                    ?>
-                                                  </strong>
-                                                </div>
-                                            <?php endif ?>
-                                            <h4>Welcome <strong><?php echo $_SESSION['username']; ?></strong></h4>
-                                            <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
-                                        <?php else : ?>
+                                        
                                             <?php include('errors.php'); ?>
                                             <h4> DEALER PORTAL LOGIN </h4>
                                             <p> Get quotes, create paperless contracts and more... </p>
@@ -184,9 +136,9 @@
                                                 </form>
                                                 <a href="forgot-password.php" style="float: right;">Forgot Password?</a>
                                             </div>
-                                        <?php endif ?>
                                     </div>
                                 </div>
+                                <?php endif ?>
                             </div>
                         </div>
                     </div>
@@ -359,7 +311,7 @@
             </div>
         </footer>
         <!-- .footer-->
-    </div>
+    <!-- </div> -->
     <!-- end layout-theme-->
 
     <!-- ++++++++++++-->

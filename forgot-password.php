@@ -100,13 +100,12 @@ background-color: #FFFFFF;
                         </div>
                         <div class="header-navibox-2">
                             <ul class="yamm main-menu nav navbar-nav">
-                                <li><a href="javascript:;"> Customers </a></li>
-                                <li><a href="become-a-dealer.html"> Dealers </a></li>
-                                <li><a href="#section1"> Contact Us </a></li>
-                                <li><a href="#section2"> About Us </a></li>
+                                <li><a href="index.php"> Home </a></li>
+                                <li><a href="index.php#section1"> About Us </a></li>
+                                <li><a href="register.php">Become A Dealer</a></li>
+                                <li><a href="index.php">Login</a></li>
                             </ul>
                         </div>
-                        
                     </div>
                 </nav>
             </div>
